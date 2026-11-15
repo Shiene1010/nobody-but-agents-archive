@@ -1,0 +1,48 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd /Volumes/Crucial\\\\ X6/Development/workspaces/nobody-but-agents-archive && pwd && git status --short --branch && echo '---' && gh auth status && echo '---' && git remote -v \\|\\| true$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd /Volumes/Crucial\\\\ X6/Development/workspaces/nobody-but-agents-archive && ls -la && echo '---' && command -v gh \\|\\| echo 'gh_not_found' && echo '---' && gh auth status \\|\\| true$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd /Volumes/Crucial\\\\ X6/Development/workspaces/nobody-but-agents-archive && echo '--- requirements\\.txt ---' && sed -n '1,40p' requirements\\.txt && echo '--- mkdocs build dry run ---' && python3 -m pip show mkdocs \\|\\| true$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd '/Volumes/Crucial X6/Development/workspaces/nobody-but-agents-archive' && pwd && printf '%s\n' \\* \\| cat -vet && echo '---' && find \\. -maxdepth 1 -mindepth 1 -printf '%P\\|%y\\\\n' \\| cat -vet$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd '/Volumes/Crucial X6/Development/workspaces/nobody-but-agents-archive' && ls -l && echo '---' && python3 - <<'PY'\nimport os\nfor p in \\['requirements\\.txt','mkdocs\\.yml','README\\.md'\\]:\n    print\\(p, os\\.path\\.exists\\(p\\), os\\.path\\.abspath\\(p\\)\\)\nPY$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd '/Volumes/Crucial X6/Development/workspaces/nobody-but-agents-archive' && printf '%q\n' \\* \\.\\[!\\.\\]\\* \\.\\.\\?\\* 2>/dev/null \\| head -n 40$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd '/Volumes/Crucial X6/Development/workspaces/nobody-but-agents-archive' && for f in \\*; do printf '%s => %q\\\\n' \"\\$f\" \"\\$f\"; done$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd '/Volumes/Crucial X6/Development/workspaces/nobody-but-agents-archive' && if \\[ -e ' requirements\\.txt ' \\]; then mv ' requirements\\.txt ' requirements\\.txt; fi && ls -lb && echo '---' && sed -n '1,80p' requirements\\.txt && echo '---' && ls -A1$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd '/Volumes/Crucial X6/Development/workspaces/nobody-but-agents-archive' && python3 -m pip install -r requirements\\.txt && python3 -m mkdocs build --strict$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd '/Volumes/Crucial X6/Development/workspaces/nobody-but-agents-archive' && python3 -m venv \\.venv && source \\.venv/bin/activate && python -m pip install --upgrade pip && python -m pip install -r requirements\\.txt && mkdocs build --strict$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd '/Volumes/Crucial X6/Development/workspaces/nobody-but-agents-archive' && git init -b main && git add \\. && git commit -m 'Initial archive docs' && gh repo create nobody-but-agents-archive --public --source=\\. --remote=origin --push --confirm$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
