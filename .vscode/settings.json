@@ -43,6 +43,14 @@
         "/^cd '/Volumes/Crucial X6/Development/workspaces/nobody-but-agents-archive' && git init -b main && git add \\. && git commit -m 'Initial archive docs' && gh repo create nobody-but-agents-archive --public --source=\\. --remote=origin --push --confirm$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd '/Volumes/Crucial X6/Development/workspaces/nobody-but-agents-archive' && source \\.venv/bin/activate && mkdocs gh-deploy --force$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^gh api -H 'Accept: application/vnd\\.github\\+json' /repos/Shiene1010/nobody-but-agents-archive/pages \\|\\| echo 'PAGES_NOT_CONFIGURED'$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
